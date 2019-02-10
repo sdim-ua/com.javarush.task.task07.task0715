@@ -23,6 +23,14 @@ import java.util.ArrayList;
     Выведи элементы списка на экран, каждый с новой строки.
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+/* 
+Продолжаем мыть раму
+*/
+
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
@@ -30,11 +38,14 @@ public class Solution {
          list.add("мама");
          list.add("мыла");
          list.add("раму");
-         for(int i = 0; i < 3 ; i++){
-              list.add( i +1, "именно");
+         
+         for(int i = 0; i < list.size() ; i+=2){
+              list.add( i + 1, "именно");
          }
-         for(int k = 0; k < list.size(); k++){
-             System.out.println(list.get(k)); 
-         }
+         
+          for (String str : list) {
+            System.out.println(str);
+        }
+        
     }
 }
